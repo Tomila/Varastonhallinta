@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.metropolia.wms.view.SupplyOrderController">
+   <children>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane>
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox fx:id="buttonBar" styleClass="editSupplyOrderButtonBar" stylesheets="@style.css" />
+                        <SplitPane dividerPositions="0.5012562814070352">
+                          <items>
+                            <AnchorPane>
+                                 <children>
+                                    <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <tabs>
+                                        <Tab text="%itemsTabTxt">
+                                          <content>
+                                            <AnchorPane>
+                                                   <children>
+                                                      <TableView fx:id="supplierItemTable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                        <columns>
+                                                          <TableColumn fx:id="supplierItemIdColumn" prefWidth="90.39998775720596" text="%idColumn" />
+                                                          <TableColumn fx:id="supplierItemNameColumn" prefWidth="142.4000244140625" text="%itemColumn" />
+                                                            <TableColumn fx:id="supplierItemPriceColumn" prefWidth="165.60000610351562" text="%priceColumn" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="237.0" prefWidth="406.0" vbarPolicy="ALWAYS">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="394.0">
+                                       <children>
+                                          <GridPane fx:id="supplyOrderDetailsGridPane" prefHeight="130.0" prefWidth="396.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <padding>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </padding>
+                                          </GridPane>
+                                          <GridPane fx:id="supplyOrderItemsGridPane" layoutX="26.0" layoutY="119.0" prefWidth="367.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+          <AnchorPane>
+               <children>
+                  <TabPane layoutX="299.0" layoutY="48.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                      <Tab text="%supplierTab">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <TableView fx:id="supplyOrderTable" layoutX="299.0" layoutY="34.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="supplyOrderNumberColumn" prefWidth="123.19997864961624" text="%orderIdColumn" />
+                                          <TableColumn fx:id="supplierNameColumn" prefWidth="156.00003051757812" text="%supplierTab" />
+                                          <TableColumn fx:id="orderAmountColumn" minWidth="0.0" prefWidth="162.4000244140625" text="%sumColumn" />
+                                          <TableColumn fx:id="dateCreateColumn" prefWidth="168.79998779296875" text="%orderDateColumn" />
+                                          <TableColumn fx:id="contactPersonColumn" prefWidth="192.800048828125" text="%ordererColumn" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

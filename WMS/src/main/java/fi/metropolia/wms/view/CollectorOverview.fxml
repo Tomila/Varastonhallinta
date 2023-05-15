@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%programMenu">
+            <items>
+              <MenuItem mnemonicParsing="false" text="%closeMenu" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%editMenu">
+            <items>
+              <MenuItem mnemonicParsing="false" text="%deleteBtn" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="%helpMenu">
+            <items>
+              <MenuItem mnemonicParsing="false" text="%abouUsMenu" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TableView fx:id="customerOrderTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="salesOrderNumberColumn" prefWidth="141.60003662109375" text="%orderNumberColumn" />
+          <TableColumn fx:id="customerNameColumn" prefWidth="136.79998779296875" text="%ordererColumn" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>

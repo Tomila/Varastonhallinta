@@ -1,0 +1,109 @@
+.rootLayout {
+	/*Image by benzoix on Freepik*/
+	-fx-background-image:url("images/perspective-exterior-nobody-empty-box.jpg");
+	-fx-background-size: cover;
+}
+
+#topMenuBar {
+	-fx-background-image:url("images/perspective-exterior-nobody-empty-box.jpg");
+	-fx-background-size: cover;
+}
+
+.menu .label{
+	-fx-text-fill: white;
+	-fx-font-size: 12pt;
+}
+
+.menu:hover{
+	-fx-background-color: black;
+}
+
+.menu:showing{
+	-fx-background-color: black;
+}
+
+.menu-item:focused {
+	-fx-background-color : black;
+}
+
+.menu-item .label {
+	-fx-text-fill: black;
+	-fx-font-size: 12pt;
+}
+
+.menu-item:focused .label {
+	-fx-text-fill: white;
+}
+
+.loginButton {
+	-fx-text-fill: Black;
+	-fx-background-color: white;
+	-fx-border-radius: 12px;
+	-fx-border-color: black;
+}
+
+.loginButton:hover {
+	-fx-border-radius: 12px;
+	-fx-background-color: #c2bfbf;
+}
+
+.loginLayout {
+	-fx-background-color: transparent;
+}
+
+.managerLayout {
+	-fx-background-color: black;
+}
+
+.editWarehouseButtonBar {
+    -fx-border-style: none none solid none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ccc;
+	-fx-min-width: 100%;
+	-fx-aligment: left;
+    
+}
+
+.addNewWarehouseButton{ 
+	-fx-background-radius: 0px;
+	-fx-pref-width: 60px;
+	-fx-background-image:url("images/addNew_32.png");
+	-fx-background-position: center top;
+	-fx-padding: 36 0 0 0;
+
+    -fx-background-repeat: no-repeat;
+  	-fx-pref-height: 60px; 
+
+}
+.editWarehouseButton{ 
+	-fx-background-radius: 0px;
+	-fx-pref-width: 60px;
+	-fx-background-image:url("images/edit_32.png");
+	-fx-background-position: center top;
+	-fx-padding: 36 0 0 0;
+
+    -fx-background-repeat: no-repeat;
+  	-fx-pref-height: 60px; 
+
+}
+.deleteWarehouseButton{ 
+	-fx-background-radius: 0px;
+	-fx-pref-width: 60px;
+	-fx-background-image:url("images/delete_32.png");
+	-fx-background-position: center top;
+	-fx-padding: 36 0 0 0;
+
+    -fx-background-repeat: no-repeat;
+  	-fx-pref-height: 60px; 
+
+}
+
+.editSupplyOrderButtonBar {
+    -fx-border-style: none none solid none;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ccc;
+	-fx-min-width: 100%;
+	-fx-min-height: 60px;
+	-fx-aligment: left;
+    
+}

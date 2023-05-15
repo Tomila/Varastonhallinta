@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fi.metropolia.wms.view.StockOverviewController">
+   <children>
+      <SplitPane orientation="VERTICAL" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TabPane prefHeight="96.0" prefWidth="158.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="%itemsTabTxt">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="800.0">
+                                 <children>
+                                    <TableView fx:id="itemTable" prefHeight="267.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="itemIdColumn" prefWidth="143.19997864961624" style="-fx-alignment: center-right;" text="%itemIdTxt" />
+                                        <TableColumn fx:id="itemNameColumn" prefWidth="213.59999084472656" text="%itemNameTxt" />
+                                          <TableColumn fx:id="itemSaldoColumn" prefWidth="198.4000244140625" text="%amountColumn" />
+                                          <TableColumn fx:id="itemPriceColumn" prefWidth="244.79998779296875" text="%priceColumn" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="%warehousesTabTxt">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TableView fx:id="warehouseTable" prefHeight="67.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="warehouseIdColumn" prefWidth="190.3999908566475" text="%warehouseIdColumn" />
+                                        <TableColumn fx:id="warehouseNameColumn" prefWidth="208.00001525878906" text="%warehouseNameColumn" />
+                                      </columns>
+                                    </TableView>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
